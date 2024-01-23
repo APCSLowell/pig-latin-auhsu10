@@ -4,8 +4,8 @@ import java.util.Scanner; // Import the Scanner class to read text files
 
 public class PigLatin{
     public void tester() {
-        // String[] lines = loadStrings("words.txt");
-        String[] lines = new String[8]; 
+        String[] lines = loadStrings("words.txt");
+        // String[] lines = new String[8]; 
         try{
             File myFile = new File("words.txt");
             Scanner myReader = new Scanner(myFile);
@@ -60,5 +60,7 @@ public class PigLatin{
         return sWord.substring(2)+"qu"+"ay";
       else if(findFirstVowel(sWord)>=1)
         return sWord.substring(findFirstVowel(sWord))+sWord.substring(0,findFirstVowel(sWord))+"ay";
+      else
+        return "ERROR!"
   }
 }//end PigLatin class
